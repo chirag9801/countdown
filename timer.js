@@ -7,6 +7,7 @@ const messageElm1 = document.querySelector('.mesg');
 
 
 const inputs = document.querySelectorAll('input')
+const audio = document.getElementById('myaudio')
 
 
 
@@ -35,3 +36,7 @@ const clock = function () {
 
 const interval = setInterval(clock, 1000)
 clock()
+
+window.onbeforeunload = function () {
+    audio.pause();
+};
